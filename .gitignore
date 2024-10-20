@@ -1,0 +1,4 @@
+.venv/
+finance_data.db
+yahoo_finance_feed.log
+__pycache__/
