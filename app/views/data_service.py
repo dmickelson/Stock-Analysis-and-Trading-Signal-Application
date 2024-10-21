@@ -4,7 +4,7 @@ This module implements the DataService class, which serves as an intermediary be
 
 from datetime import datetime, timedelta
 from typing import Optional, Dict
-from data_feed import DataFeedBase, DatabaseError, DataFetchError
+from app.models.data_feed import DataFeedBase, DatabaseError, DataFetchError
 import logging
 
 

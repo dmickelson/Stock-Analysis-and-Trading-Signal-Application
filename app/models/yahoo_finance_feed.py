@@ -4,7 +4,7 @@ This module implements the YahooFinanceFeed class, which fetches stock data and 
 
 import yfinance as yf
 from data_feed import DataFeedBase, DatabaseError, DataFetchError
-from config import settings
+from config.config import settings
 import pandas as pd
 import sqlite3
 from sqlite3 import Error
@@ -134,8 +134,9 @@ class YahooFinanceFeed(DataFeedBase):
 
                 if df.empty:
                     return self.fetch_market_indicators(start, end, force_refresh=True)
-            logging.debug(f"Fetched initial data: {df.head()}")
-            df.set_index('Date', inplace=True)
+            logging.debug(f"Fetched initial data:")
+            logging.debug(df.head())
+            # df.set_index('Date', inplace=True)
             logging.info(
                 f"Successfully fetched market indicators. Shape: {df.shape}")
             logging.debug(f"Result: {df.head()}")

@@ -3,8 +3,8 @@ This module contains the DataController class which handles API routes for stock
 """
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Path
-from data_service import DataService, DataServiceError
-from yahoo_finance_feed import YahooFinanceFeed
+from app.views.data_service import DataService, DataServiceError
+from app.models.yahoo_finance_feed import YahooFinanceFeed
 from models import StockSymbol, DateRange
 from typing import Optional, Dict, Any
 

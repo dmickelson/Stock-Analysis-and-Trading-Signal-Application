@@ -1,6 +1,6 @@
 from typing import List
-from portfolio import Portfolio
-from technical_indicators import TechnicalIndicatorBase
+from app.models.portfolio import Portfolio
+from app.models.technical_indicators import TechnicalIndicatorBase
 import pandas as pd
 
 
